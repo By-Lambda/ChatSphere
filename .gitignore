@@ -1,0 +1,19 @@
+Ignore SQLite database file
+
+database.db
+
+Ignore Python cache and virtual environment
+
+pycache/ *.pyc venv/ env/
+
+Ignore OS-generated files
+
+.DS_Store Thumbs.db
+
+Ignore IDE-specific files
+
+.idea/ .vscode/
+
+Ignore environment variables file
+
+.env
