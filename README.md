@@ -8,27 +8,6 @@ Online/offline status tracking
 SQLite database for persistent storage
 Responsive UI with Bootstrap
 
-Project Structure
-ChatSphere/
-├── static/
-│   ├── css/
-│   │   └── styles.css
-│   └── js/
-│       └── main.js
-├── templates/
-│   ├── login.html
-│   ├── register.html
-│   └── chat.html
-├── tests/                     # Optional: Unit tests
-│   └── test_server.py
-├── server.py
-├── requirements.txt
-├── database.db                # Not tracked in Git
-├── README.md
-├── LICENSE
-├── .gitignore
-└── .env                       # Optional: Environment variables
-
 Prerequisites
 
 Python 3.8 or higher
