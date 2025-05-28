@@ -1,0 +1,9 @@
+# Flask and related dependencies for the web server and real-time chat
+Flask==3.0.3
+Flask-SocketIO==5.3.6
+
+# WebSocket backend for Flask-SocketIO
+eventlet==0.36.1
+
+# Environment variable management
+python-dotenv==1.0.1

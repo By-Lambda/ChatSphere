@@ -1,0 +1,400 @@
+/**
+ * Stylesheet for ChatSphere
+ *
+ * I created this CSS file to style the ChatSphere application, a real-time group chat platform.
+ * It includes general styles, login/register page styles, chat interface styles, and animations for a polished user experience.
+ *
+ * Author: [Your Name]
+ * Created: May 2025
+ */
+
+/* ------------------------- General Styles ------------------------- */
+
+* {
+    box-sizing: border-box; /* Ensure proper width and height calculation */
+}
+
+body {
+    background: linear-gradient(135deg, #6b48ff, #a7c7e7);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+p, a {
+    user-select: none; /* Prevent text selection for specific elements */
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Card styles for login, register, and other components */
+.card {
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.3s;
+}
+
+.register-card, .login-card {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Form input styles */
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Error message styles */
+.alert-danger {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+/* ------------------------- Login/Register Page Styles ------------------------- */
+
+/* Password toggle icon styles */
+.input-group-text {
+    background-color: transparent;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.password-toggle-icon {
+    color: #6c757d;
+}
+
+.password-toggle-icon:hover {
+    color: #007bff;
+}
+
+/* Accept button styles for private chat requests */
+.accept-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+.accept-button:hover {
+    background-color: #218838;
+}
+
+/* ------------------------- Chat Interface Styles ------------------------- */
+
+/* Header styles */
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+/* User button in the header */
+.user-btn {
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    overflow: hidden;
+}
+
+.user-btn .user-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.user-btn .username {
+    display: inline-block;
+    max-width: 90px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Chat container styles */
+#chat-container {
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+}
+
+/* Chat box styles */
+#chat-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow-y: auto; /* Moved from inline style in chat.html */
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+/* Chat header styles */
+.chat-header {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2a4066;
+    border-radius: 8px 8px 0 0;
+    display: none;
+}
+
+/* Message input container styles */
+.message-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+#message-input {
+    flex: 1;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0 !important;
+}
+
+#send-button {
+    flex: 0 0 auto;
+    order: 1;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 0 !important;
+    white-space: nowrap;
+}
+
+/* Channel list styles */
+#channel-list .list-group-item {
+    cursor: pointer;
+}
+
+#channel-list .list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+/* User list styles */
+#user-list .list-group-item {
+    font-size: 0.9rem;
+    border-radius: 5px !important;
+}
+
+.user-label {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border: none;
+    background-color: transparent;
+    padding-left: 0px;
+}
+
+.user-item-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.user-item {
+    padding: 8px 10px;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #d3d8de;
+    border-radius: 5px !important;
+    position: relative;
+    z-index: 1;
+}
+
+.online-user {
+    color: #28a745;
+}
+
+.offline-user {
+    color: #6c757d;
+}
+
+/* "Request Private Chat" option styles in the sidebar */
+.chat-request-option {
+    position: absolute;
+    left: -155px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 5px 10px;
+    color: #007bff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+.chat-request-option:hover {
+    background-color: #d3d8de;
+}
+
+/* Channel button styles */
+.channel-button-wrapper {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.channel-button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px 0 0 5px;
+    background-color: #e0e7ff;
+    color: #4b5e9a;
+    border: 1px solid #c3d0f5;
+    position: relative;
+}
+
+.channel-button.active {
+    background-color: #c3d0f5;
+    color: #2a4066;
+    border-color: #a3b5e0;
+}
+
+.channel-button .new-indicator {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.channel-close-btn {
+    padding: 5px 8px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    font-size: 1.5rem;
+    border-radius: 0 5px 5px 0;
+    background-color: #f8d7da;
+    color: #dc3545;
+    border: 1px solid #f5c6cb;
+    border-left: none;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.channel-close-btn:hover {
+    background-color: #f1c1c6;
+    color: #a71d2a;
+}
+
+.channel-close-btn:active {
+    background-color: #e9a8ae;
+    color: #851923;
+}
+
+/* ------------------------- Animations ------------------------- */
+
+/* Default message animation styles */
+.default-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #4a90e2;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.default-message-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    animation: rotate 2s linear 1, colorShift 6s infinite;
+    transform-origin: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.default-message-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+    animation-delay: 1s;
+}
+
+.default-message-built-by {
+    font-size: 14px;
+    color: #999;
+    animation: scale 3s infinite;
+}
+
+/* Keyframe animations */
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes colorShift {
+    0% { color: #4a90e2; }
+    50% { color: #50e3c2; }
+    100% { color: #4a90e2; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes scale {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
